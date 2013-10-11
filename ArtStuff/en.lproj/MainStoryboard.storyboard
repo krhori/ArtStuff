@@ -53,17 +53,33 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93H-eH-Frq" customClass="AAColorView">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-bt-JLp" customClass="AAGrayscaleView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAG-9G-jJO" customClass="AALeadingColorView">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="93H-eH-Frq" firstAttribute="leading" secondItem="pmL-qP-TaF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="00w-Wg-63i"/>
+                            <constraint firstItem="Qjg-bt-JLp" firstAttribute="leading" secondItem="pmL-qP-TaF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="1YC-qY-tIO"/>
+                            <constraint firstItem="Qjg-bt-JLp" firstAttribute="top" secondItem="93H-eH-Frq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="21s-m0-nFp"/>
+                            <constraint firstItem="hAG-9G-jJO" firstAttribute="top" secondItem="Qjg-bt-JLp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ELC-2N-hL8"/>
+                            <constraint firstItem="Qjg-bt-JLp" firstAttribute="top" secondItem="pmL-qP-TaF" secondAttribute="top" constant="119" id="Gb0-EX-kHW"/>
+                            <constraint firstItem="hAG-9G-jJO" firstAttribute="top" secondItem="pmL-qP-TaF" secondAttribute="top" constant="218" id="Jc7-Gr-RGQ"/>
+                            <constraint firstItem="hAG-9G-jJO" firstAttribute="leading" secondItem="pmL-qP-TaF" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="MXh-cj-iDd"/>
+                            <constraint firstAttribute="trailing" secondItem="hAG-9G-jJO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="UxF-a9-gRN"/>
+                            <constraint firstAttribute="trailing" secondItem="Qjg-bt-JLp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="XpX-yt-HlX"/>
                             <constraint firstItem="93H-eH-Frq" firstAttribute="top" secondItem="pmL-qP-TaF" secondAttribute="top" constant="20" symbolic="YES" type="default" id="aQJ-jw-BVq"/>
                             <constraint firstAttribute="trailing" secondItem="93H-eH-Frq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="bf1-WP-WgO"/>
-                            <constraint firstAttribute="bottom" secondItem="93H-eH-Frq" secondAttribute="bottom" constant="849" id="wZR-Sn-JYl"/>
+                            <constraint firstAttribute="bottom" secondItem="hAG-9G-jJO" secondAttribute="bottom" constant="648" id="szg-i1-dwp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Colors!" id="nV9-Zv-lYf"/>
                     <connections>
+                        <outlet property="grayscaleColorView" destination="Qjg-bt-JLp" id="Vfg-37-6Sv"/>
+                        <outlet property="leadingColorView" destination="hAG-9G-jJO" id="isb-TY-Iz3"/>
                         <outlet property="secondsColorView" destination="93H-eH-Frq" id="QyJ-A1-AB4"/>
                     </connections>
                 </viewController>
@@ -91,23 +107,6 @@
             <point key="canvasLocation" x="131" y="-537"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AAColorView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AAColorView.h"/>
-        </class>
-        <class className="AAColorsVC" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AAColorsVC.h"/>
-            <relationships>
-                <relationship kind="outlet" name="secondsColorView" candidateClass="AAColorView"/>
-            </relationships>
-        </class>
-        <class className="AAViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AAViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>
